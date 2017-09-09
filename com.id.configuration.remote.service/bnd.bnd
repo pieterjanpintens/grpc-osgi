@@ -1,0 +1,17 @@
+-buildpath: \
+	com.id.configuration.remote.store;version=latest,\
+	com.id.configuration.remote.proto;version=latest,\
+	io.grcp.stub;version=latest,\
+	io.grcp.core;version=latest,\
+	osgi.annotation,\
+	osgi.cmpn,\
+	slf4j.api,\
+	com.google.protobuf
+
+-testpath: \
+
+javac.source: 1.8
+javac.target: 1.8
+
+Bundle-Version: 0.0.0.${tstamp}
+Private-Package: com.id.configuration.remote.service

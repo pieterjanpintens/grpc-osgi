@@ -1,0 +1,15 @@
+-buildpath: \
+	com.id.cassandra;version=latest,\
+	slf4j.api,\
+	osgi.annotation,\
+	osgi.cmpn,\
+	com.datastax.driver.core,\
+	osgi.core
+
+-testpath: \
+
+javac.source: 1.8
+javac.target: 1.8
+
+Bundle-Version: 0.0.0.${tstamp}
+Private-Package: com.id.cassandra.provider

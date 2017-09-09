@@ -1,0 +1,9 @@
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath 'biz.aQute.bnd:biz.aQute.bnd.gradle:3.4.0'
+  }
+}
+apply plugin: 'biz.aQute.bnd.workspace'

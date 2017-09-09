@@ -1,0 +1,12 @@
+-buildpath: \
+	com.id.configuration.remote.client;version=latest,\
+	com.id.configuration.remote.proto;version=latest,\
+	io.grcp.stub;version=latest,\
+	io.grcp.core;version=latest,\
+	org.apache.felix.gogo.runtime,\
+	slf4j.api,\
+	osgi.annotation,\
+	osgi.cmpn,\
+	com.google.protobuf
+Bundle-Version: 1.0.0.{tstamp}
+Private-Package: com.id.configuration.remote.commands

@@ -1,0 +1,9 @@
+Private-Package: com.id.configuration.remote.store.memory
+-buildpath: \
+	com.id.configuration.remote.store;version=latest,\
+	com.id.configuration.remote.proto;version=latest,\
+	io.grcp.stub;version=latest,\
+	com.google.protobuf,\
+	osgi.annotation,\
+	osgi.cmpn,\
+	slf4j.api

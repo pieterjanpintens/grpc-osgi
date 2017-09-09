@@ -1,0 +1,14 @@
+Bundle-Version: ${version}
+-classpath: lib/grpc-netty-${version}-SNAPSHOT.jar
+Export-Package: *;version=${version}
+
+-includeresource: @lib/grpc-netty-${version}-SNAPSHOT.jar!/META-INF/services/*
+
+Require-Capability: \
+	osgi.extender;\
+	filter:="(osgi.extender=osgi.serviceloader.registrar)"
+Provide-Capability: \
+	osgi.serviceloader;\
+	osgi.serviceloader=io.grpc.ManagedChannelProvider,\
+	osgi.serviceloader;\
+	osgi.serviceloader=io.grpc.ServerProvider

@@ -1,0 +1,9 @@
+-buildpath: \
+	com.id.application;version=latest,\
+	ch.qos.logback.classic,\
+	ch.qos.logback.core,\
+	slf4j.api,\
+	osgi.annotation,\
+	osgi.cmpn
+Private-Package: com.id.logback.configurator
+Bundle-Version: 0.0.0.${tstamp}

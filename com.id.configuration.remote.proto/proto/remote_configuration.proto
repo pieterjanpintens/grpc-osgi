@@ -1,0 +1,100 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.id.configuration.proto";
+
+service ConfigurationService
+{
+	// Get an option
+	rpc getGlobalConfigOption (Path) returns (ValueOption) {}
+
+	// Get an option
+	rpc getLeveledConfigOption (Option) returns (ValueOption) {}
+  
+	// Get a list of options
+	rpc getLeveledConfigOptions (stream Option) returns (stream ValueOption) {}
+	
+		// Get a list of options
+	rpc getGlobalConfigOptions (stream Path) returns (stream ValueOption) {}
+  
+	// Set an option
+	rpc setConfigOption (ValueOption) returns (Empty) {}
+  
+	// Unset an option at given level
+	rpc unsetLeveledConfigOption (Option) returns (Empty) {}
+	
+	// Unset an option at all levels
+	rpc unsetGlobalConfigOption (Path) returns (Empty) {}
+  
+	// Get namelist for given level
+	rpc getLeveledNameList (Option) returns (NameList) {}
+  
+  	// Get namelist over all levels
+	rpc getGlobalNameList (Path) returns (NameList) {}
+  
+	// Get all options for given level
+	rpc getLevel (Level) returns (stream ValueOption) {}
+	
+	// Listen for configuration changes
+	rpc listen (stream Empty) returns (stream ChangeEvent) {}  
+}
+
+enum Type
+{
+	VALUE = 0;
+	ENCRYPTED = 1;
+	FRAGMENT = 2;
+}
+
+message Empty
+{
+}
+
+message Level
+{
+	int32 level = 1;
+}
+
+message Path
+{
+	string path = 1;
+}
+
+message Option
+{
+	string path = 1;
+	int32 level = 2;
+}
+
+message TypedOption
+{
+	string path = 1;
+	int32 level = 2;
+	Type type = 3;
+}
+
+message ValueOption
+{
+	string path = 1;
+	int32 level = 2;
+	Type type = 3;
+	bytes data = 4;
+}
+
+message NameList 
+{
+	repeated Option namelist = 1;
+}
+
+message ChangeEvent
+{
+	ValueOption option = 1;
+	Operation operation = 2;
+}
+
+enum Operation
+{
+	SET = 0;
+	REMOVE = 1;
+	REMOVEALL = 2;
+}

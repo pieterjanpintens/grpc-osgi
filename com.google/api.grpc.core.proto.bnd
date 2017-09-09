@@ -1,0 +1,4 @@
+version=0.0.6
+Bundle-Version: ${version}
+-classpath: lib/grpc-core-proto-${version}.jar
+Export-Package: *;version=${version}

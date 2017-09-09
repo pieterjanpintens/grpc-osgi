@@ -1,0 +1,17 @@
+-buildpath: \
+	io.grcp.stub;version=latest,\
+	io.grcp.core;version=latest,\
+	io.grcp.protobuf;version=latest,\
+	com.google.protobuf,\
+	com.google.guava,\
+	osgi.annotation,\
+	osgi.cmpn
+-baseline: *
+javac.source: 1.8
+javac.target: 1.8
+
+Bundle-Version: 1.0.0.${tstamp}
+Export-Package: \
+	com.id.configuration.proto,\
+	com.id.configuration.proto.constants
+

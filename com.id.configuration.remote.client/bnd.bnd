@@ -1,0 +1,10 @@
+-buildpath: \
+	com.id.grpc.client;version=latest,\
+	io.grcp.core;version=latest,\
+	com.id.configuration.remote.proto;version=latest,\
+	osgi.annotation,\
+	osgi.cmpn,\
+	slf4j.api
+Private-Package: com.id.configuration.remote.client.impl
+Export-Package: com.id.configuration.remote.client
+Bundle-Version: 1.0.0.{tstamp}

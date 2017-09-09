@@ -1,0 +1,3 @@
+Bundle-Version: ${version}
+-classpath: lib/grpc-services-${version}-SNAPSHOT.jar
+Export-Package: *;version=${version}

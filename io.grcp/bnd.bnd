@@ -1,0 +1,5 @@
+# collection of io.grcp jars
+# to update replace the jars in lib and modify this version
+# if required add new/remove sub bundles
+version=1.6.2
+-sub: *.bnd
