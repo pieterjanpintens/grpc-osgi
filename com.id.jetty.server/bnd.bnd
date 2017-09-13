@@ -1,0 +1,9 @@
+Private-Package: com.id.jetty.server
+Bundle-Version: 0.0.0.${tstamp}
+-buildpath: \
+	org.eclipse.jetty.server,\
+	slf4j.api,\
+	osgi.annotation,\
+	osgi.cmpn,\
+	com.id.application;version=latest,\
+	osgi.core

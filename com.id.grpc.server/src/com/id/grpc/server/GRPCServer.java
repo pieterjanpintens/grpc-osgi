@@ -28,10 +28,12 @@ import io.grpc.ServerProvider;
  * @author pjpinten
  */
 @Component
-public class ServerApplication
+public class GRPCServer
 {
 	private final OSGiHandlerRegistry fServiceRegistry = new OSGiHandlerRegistry();
 	private Server fServer = null;
+	
+	private short fPort = 8080;
 	
 	private final Logger fLog = LoggerFactory.getLogger(getClass());
 	
@@ -56,15 +58,15 @@ public class ServerApplication
 	@Activate
 	void activate()
 	{
-		fLog.info("Starting GRCP server on port 8080");
+		fLog.info("Starting GRCP server on port {}", fPort);
 		try
 		{
 			fServer = ServerBuilder.forPort(8080).fallbackHandlerRegistry(fServiceRegistry).build();
 			fServer.start();
-			fLog.info("Started GRCP server on port 8080");
+			fLog.info("Started GRCP server on port {}", fPort);
 		}
 		catch (Throwable t) {
-			fLog.error("Failed to start GRCP server on port 8080", t);
+			fLog.error("Failed to start GRCP server on port {}", fPort, t);
 		}
 	}
 
@@ -72,16 +74,17 @@ public class ServerApplication
 	@Deactivate
 	void deactivate()
 	{
+		fLog.info("Stopped GRCP server on port {}", fPort);
 		try
 		{
 			if (!fServer.shutdown().awaitTermination(1, TimeUnit.SECONDS))
 			{
-				fLog.error("Failed to stop server within 1 second");
+				fLog.error("Failed to stop GRCP server on port {} within 1 second", fPort);
 			}
 		}
 		catch (final InterruptedException e)
 		{
-			fLog.error("Stop of server was interrupted");
+			fLog.error("Stop of GRCP server on port {} was interrupted", fPort);
 			Thread.interrupted();
 		}
 		fServer = null;

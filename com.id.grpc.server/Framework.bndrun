@@ -54,7 +54,19 @@
 	com.id.application;version=snapshot,\
 	ch.qos.logback.classic;version='[1.2.3,1.2.4)',\
 	ch.qos.logback.core;version='[1.2.3,1.2.4)',\
-	slf4j.api;version='[1.7.25,1.7.26)'
+	slf4j.api;version='[1.7.25,1.7.26)',\
+	org.eclipse.jetty.deploy;version='[9.4.6,9.4.7)',\
+	org.eclipse.jetty.http;version='[9.4.6,9.4.7)',\
+	org.eclipse.jetty.io;version='[9.4.6,9.4.7)',\
+	org.eclipse.jetty.osgi-servlet-api;version='[3.1.0,3.1.1)',\
+	org.eclipse.jetty.osgi.boot;version='[9.4.6,9.4.7)',\
+	org.eclipse.jetty.security;version='[9.4.6,9.4.7)',\
+	org.eclipse.jetty.server;version='[9.4.6,9.4.7)',\
+	org.eclipse.jetty.servlet;version='[9.4.6,9.4.7)',\
+	org.eclipse.jetty.util;version='[9.4.6,9.4.7)',\
+	org.eclipse.jetty.webapp;version='[9.4.6,9.4.7)',\
+	org.eclipse.jetty.xml;version='[9.4.6,9.4.7)',\
+	com.id.jetty.server;version=snapshot
 
 -runrequires: \
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
@@ -68,7 +80,9 @@
 	osgi.identity;filter:='(osgi.identity=org.eclipse.equinox.weaving.hook)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.aries.spifly.dynamic.bundle)',\
 	osgi.identity;filter:='(osgi.identity=com.id.logback.configurator)',\
-	osgi.identity;filter:='(osgi.identity=com.id.configuration.remote.commands)'
+	osgi.identity;filter:='(osgi.identity=com.id.configuration.remote.commands)',\
+	osgi.identity;filter:='(osgi.identity=org.eclipse.jetty.osgi.boot)',\
+	osgi.identity;filter:='(osgi.identity=com.id.jetty.server)'
 -runfw: org.eclipse.osgi;version='[3.12.0.v20170512-1932,3.12.0.v20170512-1932]'
 -runee: JavaSE-1.8
 
