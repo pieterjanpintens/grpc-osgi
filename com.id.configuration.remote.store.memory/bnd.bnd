@@ -7,3 +7,6 @@ Private-Package: com.id.configuration.remote.store.memory
 	osgi.annotation,\
 	osgi.cmpn,\
 	slf4j.api
+
+-testpath: \
+	${junit}

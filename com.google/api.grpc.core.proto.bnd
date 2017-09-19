@@ -1,4 +1,4 @@
 version=0.0.6
 Bundle-Version: ${version}
--classpath: lib/grpc-core-proto-${version}.jar
+-classpath: https://search.maven.org/remotecontent?filepath=com/google/api/grpc/grpc-core-proto/${version}/grpc-core-proto-${version}.jar
 Export-Package: *;version=${version}

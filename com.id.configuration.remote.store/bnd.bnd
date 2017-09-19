@@ -4,3 +4,7 @@ Export-Package: com.id.configuration.remote.store
 	com.id.configuration.remote.proto;version=latest,\
 	com.google.protobuf,\
 	io.grcp.stub;version=latest
+	
+-testpath: \
+	${junit}, \
+	${mockito}

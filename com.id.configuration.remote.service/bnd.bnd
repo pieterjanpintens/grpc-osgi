@@ -9,9 +9,7 @@
 	com.google.protobuf
 
 -testpath: \
-
-javac.source: 1.8
-javac.target: 1.8
+	${junit}
 
 Bundle-Version: 0.0.0.${tstamp}
 Private-Package: com.id.configuration.remote.service

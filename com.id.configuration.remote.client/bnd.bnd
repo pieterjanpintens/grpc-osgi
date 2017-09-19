@@ -5,6 +5,11 @@
 	osgi.annotation,\
 	osgi.cmpn,\
 	slf4j.api
+	
+
+-testpath: \
+	${junit}
+	
 Private-Package: com.id.configuration.remote.client.impl
 Export-Package: com.id.configuration.remote.client
 Bundle-Version: 1.0.0.{tstamp}

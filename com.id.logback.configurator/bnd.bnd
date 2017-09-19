@@ -5,5 +5,9 @@
 	slf4j.api,\
 	osgi.annotation,\
 	osgi.cmpn
+
+-testpath: \
+	${junit}
+
 Private-Package: com.id.logback.configurator
 Bundle-Version: 0.0.0.${tstamp}

@@ -3,6 +3,10 @@
 	osgi.annotation,\
 	osgi.cmpn,\
 	slf4j.api
+
+-testpath: \
+	${junit}
+
 Bundle-Version: 1.0.0.${tstamp}
 Private-Package: com.id.grpc.client.impl
 Export-Package: com.id.grpc.client

@@ -6,4 +6,8 @@ Bundle-Version: 0.0.0.${tstamp}
 	osgi.annotation,\
 	osgi.cmpn,\
 	com.id.application;version=latest,\
-	osgi.core
+	osgi.core,\
+	org.eclipse.jetty.util
+
+-testpath: \
+	${junit}

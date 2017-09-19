@@ -9,3 +9,5 @@ javac.target: 1.8
 Bundle-Version: 1.0.0.${tstamp}
 Export-Package: com.id.cassandra
 
+-testpath: \
+	${junit}

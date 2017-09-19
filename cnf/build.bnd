@@ -21,3 +21,14 @@
 		index      = ${build}/central.mvn
 
 -releaserepo: Release
+
+javac.source: 1.8
+javac.target: 1.8
+
+# JUnit
+junit: org.apache.servicemix.bundles.junit; version=4.12.0.1
+mockito: \
+org.mockito.mockito-core; version=2.10.0, \
+net.bytebuddy.byte-buddy; version=1.7.5, \
+net.bytebuddy.byte-buddy-agent; version=1.7.5, \
+org.objenesis; version=2.6.0
